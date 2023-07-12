@@ -18,6 +18,11 @@ const routes = [
         name: '商品大类',
         component: () => import('../views/bigType'),
       },
+      {
+        path: '/user',
+        name: '用户管理',
+        component: () => import('../views/user'),
+      },
     ]
   },
   {

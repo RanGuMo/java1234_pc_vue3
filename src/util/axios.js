@@ -5,7 +5,7 @@ import axios from 'axios';
 const httpService = axios.create({
   // url前缀-'http:xxx.xxx'
   // baseURL: process.env.BASE_API, // 需自定义
-  baseURL:'http://localhost:8080/',
+  baseURL:'http://localhost:8080',
   // 请求超时时间
   timeout: 3000 // 需自定义
 });
@@ -14,7 +14,7 @@ const httpService = axios.create({
 // 添加请求拦截器
 httpService.interceptors.request.use(function (config) {
   // 在发送请求之前做些什么
-  config.headers.token=window.sessionStorage.getItem('token');
+  config.headers.token = window.localStorage.getItem('token');
   return config;
 }, function (error) {
   // 对请求错误做些什么
