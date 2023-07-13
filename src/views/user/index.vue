@@ -10,7 +10,7 @@
           clearable
         ></el-input>
       </el-col>
-      <el-button type="primary" :icon="Search">搜索</el-button>
+      <el-button type="primary" :icon="Search" @click="initUserList">搜索</el-button>
     </el-row>
 
     <!-- 内容区域 -->

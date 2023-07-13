@@ -70,6 +70,8 @@ const handleLogin = () => {
           // 2.提示消息，存token到localStorage，并跳转到首页
           ElMessage.success("登录成功");
           window.localStorage.setItem("token", result.data.token);
+          // 3.存储用户信息，修改密码要用到
+          window.localStorage.setItem("userInfo", JSON.stringify(form.value));
           router.replace('/') //replace 重定向
         } else {
           ElMessage.error(result.data.msg);
