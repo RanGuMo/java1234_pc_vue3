@@ -24,6 +24,11 @@ const routes = [
         component: () => import('../views/user'),
       },
       {
+        path: '/order',
+        name: '订单管理',
+        component: () => import('../views/order'),
+      },
+      {
         path: '/modifyPassword',
         name: '修改密码',
         component: () => import('../views/modifyPassword'),
