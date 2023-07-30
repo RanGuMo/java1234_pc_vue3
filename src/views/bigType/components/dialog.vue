@@ -72,7 +72,6 @@ watch(
     if (id != -1) {
       initFormData(id);
     } else {
-      // formRef.value.resetFields();
       form.value = {
         id: -1,
         name: "",
